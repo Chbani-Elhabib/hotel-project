@@ -1,0 +1,519 @@
+body {
+  background: linear-gradient(353deg, #7d7b9b, #5f569b);
+  padding: 0 !important;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 93vh;
+}
+
+.sign .screen {
+  position: relative;
+  width: 407px;
+  height: 504px;
+  box-shadow: 0px 0px 24px #242a56;
+}
+
+/*-------------------------
+--design from content--- 
+-------------------------- */
+
+.sign .screen .screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.sign .screen .screen__content .login {
+  width: 360px;
+  padding: 30px;
+  text-align: center;
+}
+
+.sign .screen .screen__content .login h1 {
+  padding: 21px 81px 13px 0px;
+}
+
+.sign .screen .screen__content .login .login__field {
+  padding: 5px 0px 20px 19px;
+  position: relative;
+  text-align: left;
+}
+
+.sign .screen .screen__content .login .login__field .labelsignup {
+  animation: labelsignup 0.5s;
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+@keyframes labelsignup {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 17px;
+  }
+}
+
+.sign .screen .screen__content .login .login__field .top {
+  animation: top 0.5s;
+  top: 50px;
+}
+
+@keyframes top {
+  0% {
+    top: 17px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+
+.sign .screen .screen__content .login .login__field .login__input {
+  border: none;
+  border-bottom: 2px solid #d1d1d4;
+  background: none;
+  padding: 10px 20px 10px 0;
+  font-weight: 700;
+  width: 75%;
+  transition: 0.2s;
+}
+
+.sign .screen .screen__content .login .login__field .eye {
+  position: absolute;
+  right: 69px;
+  top: 18px;
+  font-size: 20px;
+  color: #7875b5;
+}
+
+.sign .screen .screen__content .login .login__field .validation {
+  position: absolute;
+  top: 14px;
+  right: 39px;
+  font-size: 27px;
+}
+.sign .screen .screen__content .login .login__field .icon-check {
+  color: rgb(10, 243, 6);
+}
+.sign .screen .screen__content .login .login__field .icon-cancel-circle {
+  color:rgb(245, 1, 57);
+}
+
+.sign .screen .screen__content .login .login__field .login__input:active,
+.sign .screen .screen__content .login .login__field .login__input:focus,
+.sign .screen .screen__content .login .login__field .login__input:hover {
+  outline: none;
+  border-bottom-color: #fcb419;
+}
+
+.sign
+  .screen
+  .screen__content
+  .login
+  .login__field
+  .login__input:focus
+  + .labelsignup {
+  opacity: 0.5;
+}
+
+.sign .screen .screen__content .login .login__submit {
+  background: #fff;
+  font-size: 14px;
+  padding: 16px 20px;
+  border-radius: 26px;
+  border: 1px solid #d4d3e8;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 88%;
+  color: #4c489d;
+  box-shadow: 3px 3px 2px #242a56;
+  cursor: pointer;
+  transition: 0.2s;
+  justify-content: space-between;
+  margin: 7px 0px 0px 86px;
+}
+
+.sign .screen .screen__content .login .login__submit .button__icon {
+  font-size: 20px;
+}
+.sign .screen .screen__content .login .signin {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 11px;
+  margin-left: -13px;
+  color: #242a56;
+  width: 74px;
+}
+
+.sign .screen .screen__content .login .signin .button__text {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.sign .screen .screen__content .login .signin .icon-chevron-left {
+  font-size: 12px;
+}
+
+.sign .screen .screen__content .login .link2:active,
+.sign .screen .screen__content .login .link2:focus,
+.sign .screen .screen__content .login .link2:hover {
+  border-color: #6a679e;
+  outline: none;
+}
+
+/* ---------------------- */
+.sign .screen .screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  overflow: hidden;
+}
+
+.sign .screen .screen__background .screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.sign .screen .screen__background .screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #fff;
+  top: -32px;
+  right: 110px;
+  border-radius: 0 72px 0 0;
+}
+
+.sign .screen .screen__background .screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #242a5670;
+  top: -118px;
+  right: -44px;
+  border-radius: 32px;
+}
+
+.sign .screen .screen__background .screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(262deg, #242a56, #6a679e);
+  top: 58px;
+  left: 219px;
+  right: 2px;
+  border-radius: 32px;
+}
+
+.sign .screen .screen__background .screen__background__shape4 {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 72px solid transparent;
+  border-top: 71px solid #373b6ac9;
+  bottom: -32px;
+  right: -67px;
+  margin: 2rem;
+  transform: rotate(314deg);
+  position: absolute;
+}
+
+.swal2-icon{
+  margin: 16px auto 0 !important;
+}
+
+.swal2-container.swal2-center>.swal2-popup{
+  width: 407px;
+}
+
+/* ------------------
+-----responsive------
+------------------ */
+
+@media (max-width: 463px) {
+  .sign .screen {
+    width: 330px;
+    height: 461px;
+  }
+
+  .sign .screen .screen__content .login h1 {
+    text-align: left;
+    padding: 16px 0 4px 0;
+    font-size: 26px;
+    margin-left: -13px;
+  }
+
+  .sign .screen .screen__content .login .login__field {
+    padding: 12px 0;
+  }
+
+  .sign .screen .screen__content .login .login__field .labelsignup {
+    top: 21px;
+    left: 0px;
+  }
+
+  @keyframes labelsignup {
+    0% {
+      top: 58px;
+    }
+    100% {
+      top: 21px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .top {
+    animation: top 0.5s;
+    top: 58px;
+  }
+
+  @keyframes top {
+    0% {
+      top: 17px;
+    }
+    100% {
+      top: 58px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .login__input {
+    padding: 9px 24px 9px 0;
+    width: 65%;
+  }
+
+  .sign .screen .screen__content .login .login__field .validation {
+    top: 21px;
+    right: 73px;
+    font-size: 31px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye{
+    right: 107px;
+    top: 23px;
+  }
+  .sign .screen .screen__content .login .login__field .icon-cancel-circle {
+    right: 78px;
+    font-size: 26px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    width: 75%;
+    margin: 16px 0px 0px 51px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    width: 130px;
+    top: -37px;
+    left: 229px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape4 {
+    border-left: 92px solid transparent;
+    border-right: 97px solid transparent;
+    border-top: 98px solid #373b6ac9;
+    bottom: -39px;
+    right: -84px;
+  }
+
+  .swal2-container.swal2-center>.swal2-popup{
+    width: 330px;
+  }
+}
+
+@media (max-width: 405px) {
+  .sign .screen .screen__content .login {
+    width: 306px;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    width: 80%;
+    margin: 8px 0px 0px 72px;
+  }
+
+  .sign .screen .screen__content .login .login__field .validation {
+    top: 15px;
+    right: 15px;
+    font-size: 31px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye{
+    right: 47px;
+  }
+  .sign .screen .screen__content .login .login__field .icon-cancel-circle {
+    top: 21px;
+    right: 18px;
+    font-size: 25px;
+  }
+
+  .sign .screen .screen__content .login .login__field .login__input{
+    width: 82%;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1{
+    right: 98px;
+  }
+}
+
+@media (max-width: 363px) {
+  .sign .screen {
+    width: 275px;
+    height: 431px;
+  }
+
+  .sign .screen .screen__content .login {
+    width: 286px;
+  }
+
+  .sign .screen .screen__content .login h1 {
+    padding: 0;
+    padding-bottom: 1px;
+    padding-top: 16px;
+    margin-left: -18px;
+  }
+
+  .sign .screen .screen__content .login .login__field .login__input {
+    width: 73%;
+    font-size: 12px;
+  }
+
+  .sign .screen .screen__content .login .login__field .validation{
+    top: 13px;
+    right: 15px;
+    font-size: 28px;
+  }
+
+  .sign .screen .screen__content .login .login__field .icon-cancel-circle{
+    top: 17px;
+    right: 18px;
+    font-size: 23px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye{
+    top: 19px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    width: 78%;
+    margin: 19px 0px 0px 48px;
+    padding: 13px 20px;
+  }
+
+  .sign .screen .screen__content .login .signin {
+    margin-top: -6px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1 {
+    right: 86px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape2 {
+    top: -139px;
+    right: -47px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    top: -22px;
+    left: 136px;
+  }
+
+  .sign .screen .screen__content .login .login__field .labelsignup {
+    font-size: 13px;
+  }
+
+  .swal2-container.swal2-center>.swal2-popup{
+    width: 275px;
+  }
+
+  .swal2-title{
+    padding: 0 1px !important;
+    font-size: 1.5em !important;
+  }
+
+}
+
+@media (max-width: 312px) {
+  .sign .screen {
+    width: 223px;
+  }
+
+  .sign .screen .screen__content .login {
+    width: 100%;
+    padding: 0px 0px 0 19px;
+  }
+
+  .sign .screen .screen__content .login h1 {
+    text-align: center;
+    color: white;
+  }
+
+  .sign .screen .screen__content .login .login__field .login__input {
+    width: 87%;
+  }
+
+  .sign .screen .screen__content .login .login__field .validation {
+    right: 0px;
+    top: 15px;
+    font-size: 27px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye{
+    right: 28px;
+    top: 18px;
+  }
+  .sign .screen .screen__content .login .login__field .icon-cancel-circle {
+    right: 6px;
+    top: 20px;
+    font-size: 18px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    width: 83%;
+    margin: 0;
+    margin-left: 24px;
+    padding: 9px 20px;
+    margin-top: 18px;
+  }
+
+  .sign .screen .screen__content .login .signin {
+    margin-top: 16px;
+    margin-left: -15px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    top: -7px;
+    left: 76px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape4 {
+    border-left: 89px solid transparent;
+    border-right: 89px solid transparent;
+    border-top: 90px solid #373b6ac9;
+    bottom: -37px;
+    right: -82px;
+  }
+
+  .swal2-container.swal2-center>.swal2-popup{
+    width: 223px;
+  }
+
+  .swal2-html-container {
+    font-size: 1.01em !important;
+    margin: 10px 0 !important;
+    padding: 0 10px !important;
+  }
+
+}
