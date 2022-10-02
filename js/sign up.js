@@ -248,15 +248,35 @@ $(document).ready(function () {
         text: "password are not matching.",
       });
     } else {
-        e.preventDefault();
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.onload = function () {
+      e.preventDefault();
+      // const xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onload = function () {
 
-          console.log(this.responseText);
-          
-        };
-        xmlhttp.open("GET", "database/emailunique.php?email=" + login__input[1].value);
-        xmlhttp.send();
+      //   $EmailUserName = new Array();
+      //   $EmailUserName = JSON.parse(xmlhttp.responseText);
+      //   console.log(xmlhttp.responseText);
+      //   console.log($EmailUserName);
+      //   // console.log(login__input[1].value);
+      //   // if(this.responseText == login__input[1].value){
+      //   //     console.log("yes")
+      //   // }else{
+      //   //     console.log("no")
+      //   // }
+
+      // };
+      // xmlhttp.open("GET", "database/emailunique.php?email=" + login__input[1].value + "&username="+login__input[0].value);
+      // xmlhttp.send();
+
+      $.ajax({
+        url: "database/emailunique.php",
+        type: "POST",
+        data: { username: login__input[0].value, email: login__input[1].value },
+        success: function (response) {
+          response =JSON.parse(response)
+          console.log(response);
+          // console.log(response[0]);
+        },
+      });
     }
   });
   //end click buttom

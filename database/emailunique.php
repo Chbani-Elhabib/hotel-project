@@ -2,31 +2,62 @@
 
 include("data.php");
 
-// $email = $_REQUEST["email"];
-// $email = "bgfdgdgdf@gmail.com";
+$EmailUserName =  Array();
 
-try {
+if(isset($_POST['username'])){
 
-    $stmt = $con->prepare("SELECT Email FROM users WHERE Email = 'bgfdgdgdf@gmail.com' ");
+    $UserName = $_POST['username'];
+
+    $sql = "SELECT * FROM users WHERE UserName = :username";
+
+    // Prepare statement
+    $stmt = $con->prepare($sql);
+    $stmt-> bindParam(':username', $UserName, PDO::PARAM_STR);
+
+    // execute the query
     $stmt->execute();
 
-    $email = $stmt->setFetchMode(PDO::FETCH_ASSOC);
- 
-}
-catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
 
-// $sql = "SELECT Email FROM users WHERE Email = 'bgfdgdgdf@gmail.com'";
+    $results=$stmt->fetchAll(PDO::FETCH_OBJ);
+    if($stmt->rowCount() > 0){
+        foreach ($results as $row) {
+                $UserName=$row->UserName;
+        };
+    }else{
+        $UserName = "no";
+    };
 
-// $stmt = $con->prepare($sql);
-// // $stmt->bind_param("s", $_GET['email']);
+    $EmailUserName['UserName'] = $UserName;
 
-// $stmt->execute();
+};
 
-// $stmt->store_result();
-// $stmt->bind_result($email);
-// $stmt->fetch();
-// $stmt->close();
+if(isset($_POST['email'])){
 
-echo  $email;
+    $Email = $_POST['email'];
+
+    $sql = "SELECT * FROM users WHERE Email = :email";
+
+    // Prepare statement
+    $stmt = $con->prepare($sql);
+    $stmt-> bindParam(':email', $Email, PDO::PARAM_STR);
+
+    // execute the query
+    $stmt->execute();
+
+
+    $results=$stmt->fetchAll(PDO::FETCH_OBJ);
+    if($stmt->rowCount() > 0){
+        foreach ($results as $row) {
+                $Email=$row->Email;
+        };
+    }else{
+        $Email = "no";
+    }
+
+    $EmailUserName['Email'] =  $Email;
+
+};
+
+print_r($EmailUserName);
+
+
