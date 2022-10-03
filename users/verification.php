@@ -1,5 +1,5 @@
-<?php
-// if(($_SERVER["REQUEST_METHOD"] == "POST")){
+ <?php
+if(($_SERVER["REQUEST_METHOD"] == "POST")){
     $UserName = $_POST['username'];
     $Email = $_POST['email'];
     $Password = $_POST['password'];
@@ -7,9 +7,9 @@
     echo $UserName;
     echo $Email;
     echo $Password;
-// }
-?>
-<!DOCTYPE html>
+}
+?> 
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,4 +38,4 @@
             </small>
         </div>
   </body>
-</html>
+</html> -->

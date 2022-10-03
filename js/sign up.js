@@ -7,6 +7,7 @@ $(document).ready(function () {
   const login__input = $(".login__input");
   const validation = $(".validation");
   const login__submit = $(".login__submit");
+  const form = $(".login");
   const eye = $(".eye");
   const validation_Username = /^[a-zA-Z]+[0-9]*[a-zA-Z]*$/;
   const validation_email = /(^\w+([\.-]?\w+))+\@gmail.com/;
@@ -300,13 +301,21 @@ $(document).ready(function () {
               showConfirmButton: false,
               timer: 2000
             });
-            $.ajax({
-              url: "users/verification.php",
-              type: "POST",
-              data: {username:login__input[0].value, email:login__input[1].value,password:login__input[2].value},
-            });
+            // $.ajax({
+            //   url: "users/verification.php",
+            //   type: "POST",
+            //   data: {username:login__input[0].value, email:login__input[1].value,password:login__input[2].value}
+            //   ,
+            //     success: function( data){
+            //         console.log(data)
+            //     },
+            //     error: function( errorThrown ){
+            //         console.log( errorThrown );
+            //     }
+            // });
             setTimeout((el) => {
-              window.location.href= 'http://localhost/hotel/users/verification.php';
+              // window.location.href= 'http://localhost/hotel/users/verification.php?id='+ login__input[1].value;
+              form.submit();
             },2000)
           };
         },

@@ -25,7 +25,7 @@
     <div class="sign">
       <div class="screen">
         <div class="screen__content">
-          <form class="login">
+          <form class="login" method="post" action="users/verification.php">
             <h1>SIGN UP</h1>
             <div class="login__field">
               <input type="text" class="login__input" name="Username">
@@ -48,7 +48,7 @@
               <label class="labelsignup" for="login__input">Confirm Password</label>
               <span class="validation"></span>
             </div>
-            <button class="login__submit">
+            <button class="login__submit" >
               <span class="button__text">Log Up Now</span>
               <i class="button__icon icon-chevron-right"></i>
             </button>				
