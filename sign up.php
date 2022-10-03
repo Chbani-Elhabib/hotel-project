@@ -1,14 +1,5 @@
 <?php
   $active = "signUP";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $Username = $_POST['Username'];
-    $Email = $_POST['Email'];
-    $Password = $_POST['Password'];
-
-
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +25,7 @@
     <div class="sign">
       <div class="screen">
         <div class="screen__content">
-          <form class="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+          <form class="login">
             <h1>SIGN UP</h1>
             <div class="login__field">
               <input type="text" class="login__input" name="Username">

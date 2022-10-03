@@ -38,11 +38,13 @@ $(document).ready(function () {
       eye.removeClass("icon-eye-blocked");
       eye.addClass("icon-eye");
       login__input[2].type = "text";
+      login__input[3].type = "text";
       return;
     } else {
       eye.removeClass("icon-eye");
       eye.addClass("icon-eye-blocked");
       login__input[2].type = "password";
+      login__input[3].type = "password";
     }
   });
   //end click on eye
@@ -63,9 +65,22 @@ $(document).ready(function () {
         login__input[0].value.length >= 4 &&
         login__input[0].value.match(validation_Username)
       ) {
-        validation.eq(0).addClass("icon-check");
-        validation.eq(0).removeClass("icon-cancel-circle");
-        login__input.eq(0).css("border-bottom-color", "rgb(10, 243, 6)");
+        $.ajax({
+          url: "database/emailunique.php",
+          type: "POST",
+          data: { username: login__input[0].value},
+          success: function (response) {
+            if(response == login__input[0].value){
+              validation.eq(0).removeClass("icon-check");
+              validation.eq(0).addClass("icon-cancel-circle");
+              login__input.eq(0).css("border-bottom-color", "rgb(245, 1, 57)");
+            }else{
+              validation.eq(0).addClass("icon-check");
+              validation.eq(0).removeClass("icon-cancel-circle");
+              login__input.eq(0).css("border-bottom-color", "rgb(10, 243, 6)");
+            }
+          },
+        });
       } else if (
         (validation.eq(0).attr("class") == "validation icon-check" &&
           login__input[0].value.length < 4) ||
@@ -79,6 +94,22 @@ $(document).ready(function () {
 
       // validation  Email
       if (login__input[1].value.match(validation_email)) {
+        $.ajax({
+          url: "database/emailunique.php",
+          type: "POST",
+          data: { email: login__input[1].value},
+          success: function (response) {
+            if(response == login__input[1].value){
+              validation.eq(1).removeClass("icon-check");
+              validation.eq(1).addClass("icon-cancel-circle");
+              login__input.eq(1).css("border-bottom-color", "rgb(245, 1, 57)");
+            }else{
+              validation.eq(1).addClass("icon-check");
+              validation.eq(1).removeClass("icon-cancel-circle");
+              login__input.eq(1).css("border-bottom-color", "rgb(10, 243, 6)");
+            }
+          },
+        });
         validation.eq(1).addClass("icon-check");
         validation.eq(1).removeClass("icon-cancel-circle");
         login__input.eq(1).css("border-bottom-color", "rgb(10, 243, 6)");
@@ -187,7 +218,6 @@ $(document).ready(function () {
       e.preventDefault();
       Swal.fire({
         icon: "error",
-        title: "username error",
         text: "example: username4452",
       });
     }
@@ -206,7 +236,6 @@ $(document).ready(function () {
       e.preventDefault();
       Swal.fire({
         icon: "error",
-        title: "Email error",
         text: "example: users@gmail.com",
       });
     }
@@ -225,7 +254,6 @@ $(document).ready(function () {
       e.preventDefault();
       Swal.fire({
         icon: "error",
-        title: "Email password",
         text: "Check a password between 8 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.",
       });
     }
@@ -244,40 +272,46 @@ $(document).ready(function () {
       e.preventDefault();
       Swal.fire({
         icon: "error",
-        title: "Email password",
         text: "password are not matching.",
       });
     } else {
+      // validation UeserName and Email in database
       e.preventDefault();
-      // const xmlhttp = new XMLHttpRequest();
-      // xmlhttp.onload = function () {
-
-      //   $EmailUserName = new Array();
-      //   $EmailUserName = JSON.parse(xmlhttp.responseText);
-      //   console.log(xmlhttp.responseText);
-      //   console.log($EmailUserName);
-      //   // console.log(login__input[1].value);
-      //   // if(this.responseText == login__input[1].value){
-      //   //     console.log("yes")
-      //   // }else{
-      //   //     console.log("no")
-      //   // }
-
-      // };
-      // xmlhttp.open("GET", "database/emailunique.php?email=" + login__input[1].value + "&username="+login__input[0].value);
-      // xmlhttp.send();
-
       $.ajax({
         url: "database/emailunique.php",
         type: "POST",
         data: { username: login__input[0].value, email: login__input[1].value },
         success: function (response) {
-          response =JSON.parse(response)
-          console.log(response);
-          // console.log(response[0]);
+          const myArray = response.split(",");
+          if(myArray[0] == login__input[0].value){
+            Swal.fire({
+              icon: "error",
+              text: "has been UserName recorded before .",
+            });
+          }else if(myArray[1] == login__input[1].value){
+            Swal.fire({
+              icon: "error",
+              text: " has been Email recorded before.",
+            });           
+          }else{
+            Swal.fire({
+              icon: 'success',
+              text: 'Then register successfully',
+              showConfirmButton: false,
+              timer: 2000
+            });
+            $.ajax({
+              url: "users/verification.php",
+              type: "POST",
+              data: {username:login__input[0].value, email:login__input[1].value,password:login__input[2].value},
+            });
+            setTimeout((el) => {
+              window.location.href= 'http://localhost/hotel/users/verification.php';
+            },2000)
+          };
         },
       });
-    }
+    };
   });
   //end click buttom
 });

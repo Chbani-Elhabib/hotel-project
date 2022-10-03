@@ -2,7 +2,7 @@
 
 include("data.php");
 
-$EmailUserName =  Array();
+// $EmailUserName =  Array();
 
 if(isset($_POST['username'])){
 
@@ -27,7 +27,7 @@ if(isset($_POST['username'])){
         $UserName = "no";
     };
 
-    $EmailUserName['UserName'] = $UserName;
+    // $EmailUserName['UserName'] = $UserName;
 
 };
 
@@ -54,10 +54,19 @@ if(isset($_POST['email'])){
         $Email = "no";
     }
 
-    $EmailUserName['Email'] =  $Email;
+    // $EmailUserName['Email'] =  $Email;
 
 };
 
-print_r($EmailUserName);
+// print_r($EmailUserName);
+
+if(isset($_POST['username']) && isset($_POST['email'])){
+    echo $UserName . "," . $Email ;
+}else if(isset($_POST['username'])){
+    echo $UserName ;
+}else if(isset($_POST['email'])){
+    echo $Email ;
+}
+
 
 
