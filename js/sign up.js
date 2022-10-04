@@ -21,7 +21,7 @@ $(document).ready(function () {
   });
   // end click en label focus to input
 
-  // start show and hed eye
+  // start show and head eye
   login__input[2].addEventListener("keyup", (e) => {
     if (login__input[2].value.length >= 1 && eye.attr("class") == "eye") {
       eye.addClass("icon-eye-blocked");
@@ -31,7 +31,7 @@ $(document).ready(function () {
       eye.removeClass("icon-eye");
     }
   });
-  // end show and hed eye
+  // end show and head eye
 
   //start click on eye
   eye.click((ee) => {
@@ -61,7 +61,7 @@ $(document).ready(function () {
       }
       // end animate label
 
-      // validation  users name
+      // validation  usersname
       if (
         login__input[0].value.length >= 4 &&
         login__input[0].value.match(validation_Username)
@@ -301,21 +301,9 @@ $(document).ready(function () {
               showConfirmButton: false,
               timer: 2000
             });
-            // $.ajax({
-            //   url: "users/verification.php",
-            //   type: "POST",
-            //   data: {username:login__input[0].value, email:login__input[1].value,password:login__input[2].value}
-            //   ,
-            //     success: function( data){
-            //         console.log(data)
-            //     },
-            //     error: function( errorThrown ){
-            //         console.log( errorThrown );
-            //     }
-            // });
             setTimeout((el) => {
-              // window.location.href= 'http://localhost/hotel/users/verification.php?id='+ login__input[1].value;
               form.submit();
+              window.location.reload();
             },2000)
           };
         },

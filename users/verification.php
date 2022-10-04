@@ -1,8 +1,8 @@
  <?php
 if(($_SERVER["REQUEST_METHOD"] == "POST")){
-    $UserName = $_POST['username'];
-    $Email = $_POST['email'];
-    $Password = $_POST['password'];
+    $UserName = $_POST['Username'];
+    $Email = $_POST['Email'];
+    $Password = $_POST['Password'];
 
     echo $UserName;
     echo $Email;
