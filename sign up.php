@@ -1,5 +1,32 @@
 <?php
   $active = "signUP";
+  session_start();
+
+
+  if(($_SERVER["REQUEST_METHOD"] == "POST")){
+
+
+      $UserName = $_POST['Username'];
+      $Email = $_POST['Email'];
+      $Password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+
+
+      include("database/data.php");
+
+      $sql = "INSERT INTO users (UserName , Email, Passworde)
+      VALUES ('$UserName', '$Email', '$Password')";
+      $con->exec($sql);
+
+      $_SESSION['UserName'] = $UserName ;
+      $_SESSION['Email'] = $Email ;
+      $_SESSION['Password'] = $Password ;
+
+      header('Location: users/verification.php');
+      exit();
+
+  };
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +52,7 @@
     <div class="sign">
       <div class="screen">
         <div class="screen__content">
-          <form class="login" method="post" action="users/verification.php">
+          <form class="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <h1>SIGN UP</h1>
             <div class="login__field">
               <input type="text" class="login__input" name="Username">

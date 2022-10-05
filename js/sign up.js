@@ -303,7 +303,9 @@ $(document).ready(function () {
             });
             setTimeout((el) => {
               form.submit();
-              window.location.reload();
+              for(let i = 0; i < 4; i++){
+                login__input[i].value = "" ; 
+              };
             },2000)
           };
         },
