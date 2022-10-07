@@ -17,6 +17,8 @@
           <li><a href="#">Careers</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">How we work</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a class="lang" href="#">Arabic</a></li>
         </ul>
       </div>
       <!-- //Company -->

@@ -1,13 +1,15 @@
 <?php
-  include("Languages/English.php");
+  $active = "home";
 ?>
 <!DOCTYPE html>
-<html lang="En">
+<html lang="en">
 <head>
   <?php include("head/link_css.php") ?>
   <!-- // css  -->
   <!-- script js -->
   <?php include("head/link_javascript.php") ?>
+  <!-- ======jpuery fouther====== -->
+  <script defer src="js/header_footer/footer.js"></script>
   <!-- //script js -->
 </head>
   <!-- header -->
@@ -15,7 +17,7 @@
     include("header_footer/header.php");
   ?>
   <!-- //header -->
-  <h1>index</h1>
+  <h1>home</h1>
 
   <!-- footer -->
   <?php

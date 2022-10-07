@@ -23,12 +23,11 @@
           <nav class="menu menu--iris">
             <ul class="nav navbar-nav menu__list">
               <!-- menu__item--current -->
-              <li class="menu__item <?php if($active == "home"){echo "menu__item--current";} ?>"><a href="index.php" class="menu__link">Hotel</a></li>
-              <li class="menu__item <?php if($active == "room"){echo "menu__item--current";} ?>"><a href="room.php" class="menu__link scroll">Rooms</a></li>
-              <li class="menu__item <?php if($active == "services"){echo "menu__item--current";} ?>"><a href="services.php" class="menu__link scroll">Services</a></li>
-              <li class="menu__item <?php if($active == "food"){echo "menu__item--current";} ?>"><a href="food.php" class="menu__link scroll">Food</a></li>
-              <li class="menu__item <?php if($active == "aboutUs"){echo "menu__item--current";} ?>"><a href="about us.php" class="menu__link scroll">About Us</a></li>
-              <li class="menu__item <?php if($active == "signIn"){echo "menu__item--current";} ?>"><a href="sign in.php" class="menu__link scroll">Sign in</a></li>
+              <li class="menu__item <?php if($active == "home"){echo "menu__item--current";} ?>"><a href="home.php" class="menu__link"><?php echo lang("Hotel") ?></a></li>
+              <li class="menu__item <?php if($active == "room"){echo "menu__item--current";} ?>"><a href="room.php" class="menu__link scroll"><?php echo lang("Rooms") ?></a></li>
+              <li class="menu__item <?php if($active == "food"){echo "menu__item--current";} ?>"><a href="food.php" class="menu__link scroll"><?php echo lang("menu") ?></a></li>
+              <li class="menu__item <?php if($active == "aboutUs"){echo "menu__item--current";} ?>"><a href="about us.php" class="menu__link scroll"><?php echo lang("About") ?></a></li>
+              <li class="menu__item <?php if($active == "signIn"){echo "menu__item--current";} ?>"><a href="sign in.php" class="menu__link scroll"><?php echo lang("Sign in") ?></a></li>
               <!-- Contact Us -->
             </ul>
           </nav>

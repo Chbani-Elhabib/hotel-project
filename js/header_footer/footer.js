@@ -1,4 +1,11 @@
-// $(document).ready(function () {
+$(document).ready(() => {
+  lang = $(".lang");
+  html = $("html"),
+  lang[0].addEventListener("click", (e) => {
+    html.attr("lang","Ar");
+  });
+});
+
 //   document.addEventListener("scroll", () => {
 //     const footee = $('.footer');
 //     const spanbottom = $(".border-bottom");
@@ -14,4 +21,3 @@
 //       // widthspan[3].animate({ width: "0" }, 5000);
 //     }
 //   });
-// });
