@@ -153,16 +153,24 @@ body {
   margin-top: 11px;
   margin-left: -13px;
   color: #242a56;
-  width: 74px;
+  transition: 0.5s;
 }
 
 .sign .screen .screen__content .login .signin .button__text {
   font-size: 15px;
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .sign .screen .screen__content .login .signin .icon-chevron-left {
-  font-size: 12px;
+  font-size: 18px;
+}
+
+.sign .screen .screen__content .login .signin:hover .button__text{
+	font-size: 17px;
+}
+.sign .screen .screen__content .login .signin:hover .icon-chevron-left{
+	font-size: 20px;
 }
 
 .sign .screen .screen__content .login .link2:active,

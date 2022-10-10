@@ -18,7 +18,7 @@
           <li><a href="#">Blog</a></li>
           <li><a href="#">How we work</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a class="lang" href="#">Arabic</a></li>
+          <li><a href=<?php echo $_SESSION["lang"] == "en" ?"?lang=ar" :"?lang=en" ;?>>Arabic</a></li>
         </ul>
       </div>
       <!-- //Company -->

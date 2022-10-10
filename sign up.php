@@ -1,7 +1,20 @@
 <?php
-  $active = "signUP";
   session_start();
+  $active = "signUP";
+  
+  if(!isset($_SESSION["lang"])){
+    $_SESSION["lang"] = "en";
+  };
 
+  if(isset($_GET["lang"])){
+    $_SESSION["lang"] = $_GET["lang"];
+  };
+
+  if($_SESSION["lang"] == "en"){
+    include("Languages/English.php");
+  }else{
+    include("Languages/Arabic.php");
+  };
 
   if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
@@ -29,7 +42,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $_SESSION["lang"];?>">
   <head>
     <?php include("head/link_css.php") ?>
     <!-- <link rel="stylesheet" href="css/sign in.css">   -->

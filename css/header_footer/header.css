@@ -338,7 +338,7 @@ li.menu__item:nth-child(6) {
 
 	.logohotel {
 		width: 113px;
-		margin-top: -19px;
+		margin-top: -14px;
 		height: 72px;
 	}
 
@@ -680,6 +680,10 @@ li.menu__item:nth-child(6) {
 }
 
 @media(max-width:768px) {
+	.navbar-default .navbar-nav>li>a {
+		font-size: 19px;
+		margin: 7px 0;
+	}
 	.book-form form input[type="submit"] {
 		font-size: 13px;
 	}
@@ -802,11 +806,13 @@ li.menu__item:nth-child(6) {
 @media(max-width:767px) {
 	.navbar-default .navbar-toggle .icon-bar {
 		background-color: #fcb214;
+		width: 28px;
+		height: 3px;
 	}
 
 	.navbar-default .navbar-toggle {
-		border-color: #ffce14;
-		margin-top: 3px !important;
+		margin-top: 10px !important;
+		border: none;
 	}
 
 	.navbar-default .navbar-toggle:hover,
@@ -1468,6 +1474,7 @@ li.menu__item:nth-child(6) {
 	.navbar-toggle .icon-bar {
 		width: 19px;
 	}
+
 
 	.navbar-default .navbar-toggle {
 		margin-top: 5px !important;

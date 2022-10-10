@@ -1,8 +1,21 @@
 <?php
+  session_start();
   $active = "food";
+  if(!isset($_SESSION["lang"])){
+    $_SESSION["lang"] = "en";
+  };
+  if(isset($_GET["lang"])){
+    $_SESSION["lang"] = $_GET["lang"];
+  };
+
+  if($_SESSION["lang"] == "en"){
+    include("Languages/English.php");
+  }else{
+    include("Languages/Arabic.php");
+  };
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $_SESSION["lang"];?>">
 <head>
   <?php include("head/link_css.php") ?>
   <!-- // css  -->

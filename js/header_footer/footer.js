@@ -1,10 +1,16 @@
-$(document).ready(() => {
-  lang = $(".lang");
-  html = $("html"),
-  lang[0].addEventListener("click", (e) => {
-    html.attr("lang","Ar");
-  });
-});
+// $(document).ready(() => {
+//   lang = $(".lang");
+//   html = $("html"),
+//   lang[0].addEventListener("click", (e) => {
+//     if(html.attr("lang") == "En"){
+//       html.attr("lang","Ar");
+//     }else{
+//       html.attr("lang","En");
+//     };
+//   });
+// });
+
+
 
 //   document.addEventListener("scroll", () => {
 //     const footee = $('.footer');
