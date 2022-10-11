@@ -3,7 +3,7 @@ body {
 }
 
 .w3_navigation{
-	position: fixed;
+	/* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -36,10 +36,10 @@ body {
 }
 
 .sign .screen .screen__content .login {
-    width: 360px;
-    padding: 30px;
-    padding-top: 161px;
-    padding-left: 41px;
+  width: 360px;
+  padding: 30px;
+  padding-top: 133px;
+  padding-left: 41px;
 }
 
 .sign .screen .screen__content .login .login__field {
@@ -87,9 +87,9 @@ body {
 
 .sign .screen .screen__content .login .login__field .eye {
   position: absolute;
-  right: 31px;
-  top: 32px;
-  font-size: 20px;
+  right: 15px;
+  top: 19px;
+  font-size: 24px;
   color: #7875b5;
 }
 
@@ -112,21 +112,21 @@ body {
 }
 
 .sign .screen .screen__content .login .login__submit {
-	background: #fff;
-    font-size: 18px;
-    padding: 16px 20px;
-    border-radius: 26px;
-    border: 1px solid #d4d3e8;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 74%;
-    color: #4c489d;
-    box-shadow: 3px 3px 2px #242a56;
-    cursor: pointer;
-    transition: 0.2s;
-    margin: 11px 76px;
+  background: #fff;
+  font-size: 18px;
+  padding: 16px 5px 16px 13px;
+  border-radius: 26px;
+  border: 1px solid #d4d3e8;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 57%;
+  color: #4c489d;
+  box-shadow: 3px 3px 2px #242a56;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 8px 69px;
 }
 
 .sign .screen .screen__content .login .link {
@@ -210,7 +210,7 @@ body {
   width: 520px;
   background: #fff;
   top: -50px;
-  right: 120px;
+  right: 111px;
   border-radius: 0 72px 0 0;
 }
 
