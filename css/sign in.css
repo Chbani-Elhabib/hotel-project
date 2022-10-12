@@ -2,12 +2,20 @@ body {
   background: linear-gradient(357deg, #646199, #5f559f);
 }
 
-.w3_navigation{
-	/* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+.swal2-shown {
+  padding: 0 !important;
+}
+
+.swal2-popup {
+  width: 406px !important;
+}
+
+.w3_navigation {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 .sign {
@@ -137,15 +145,15 @@ body {
 }
 
 .sign .screen .screen__content .login .signin {
-	display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    color: #242a56;
-    position: absolute;
-    bottom: 11px;
-    left: 11px;
-	transition: 0.5s;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  color: #242a56;
+  position: absolute;
+  bottom: 11px;
+  left: 11px;
+  transition: 0.5s;
 }
 
 .sign .screen .screen__content .login .signin .button__text {
@@ -155,14 +163,14 @@ body {
 }
 
 .sign .screen .screen__content .login .signin .icon-chevron-left {
-	font-size: 18px;
+  font-size: 18px;
 }
 
-.sign .screen .screen__content .login .signin:hover .button__text{
-	font-size: 17px;
+.sign .screen .screen__content .login .signin:hover .button__text {
+  font-size: 17px;
 }
-.sign .screen .screen__content .login .signin:hover .icon-chevron-left{
-	font-size: 20px;
+.sign .screen .screen__content .login .signin:hover .icon-chevron-left {
+  font-size: 20px;
 }
 
 .sign .screen .screen__content .login .login__submit:active,
@@ -215,45 +223,98 @@ body {
 }
 
 .sign .screen .screen__background .screen__background__shape2 {
-	height: 220px;
-    width: 220px;
-    background: #242a56;
-    top: -150px;
-    right: -18px;
-    border-radius: 32px;
+  height: 220px;
+  width: 220px;
+  background: #242a56;
+  top: -150px;
+  right: -18px;
+  border-radius: 32px;
 }
 
 .sign .screen .screen__background .screen__background__shape3 {
-	height: 540px;
-    width: 190px;
-    background: linear-gradient(270deg, #242a56, #6a679e);
-    top: -56px;
-    right: -53px;
-    border-radius: 32px;
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #242a56, #6a679e);
+  top: -56px;
+  right: -53px;
+  border-radius: 32px;
 }
 
 .sign .screen .screen__background .screen__background__shape4 {
-	width: 0;
-    height: 0;
-    border-left: 82px solid transparent;
-    border-right: 92px solid transparent;
-    border-top: 81px solid #373b6ac9;
-    bottom: -29px;
-    right: -79px;
-    margin: 2rem;
-    transform: rotate(314deg);
-    position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 82px solid transparent;
+  border-right: 92px solid transparent;
+  border-top: 81px solid #373b6ac9;
+  bottom: -29px;
+  right: -79px;
+  margin: 2rem;
+  transform: rotate(314deg);
+  position: absolute;
 }
 
 /* ------------------
 -----responsive------
 ------------------ */
 
-@media (max-width: 408px) {
+@media (max-width: 530px) {
+  .sign .screen {
+    width: 338px;
+    height: 438px;
+  }
+
+  .sign .screen .screen__content .login {
+    width: 332px;
+    padding-left: 31px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye {
+    right: 9px;
+    top: 23px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    width: 60%;
+    margin: 9px 67px;
+  }
+
+  .sign .screen .screen__content .login .signin {
+    bottom: 20px;
+    left: 4px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1 {
+    right: 100px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape2 {
+    top: -153px;
+    right: -35px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    top: -83px;
+    right: -94px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape4 {
+    border-left: 60px solid transparent;
+    border-right: 65px solid transparent;
+    border-top: 62px solid #373b6ac9;
+    bottom: -32px;
+    right: -67px;
+  }
+
+  .swal2-popup {
+    width: 327px !important;
+  }
+}
+@media (max-width: 410px) {
   .sign .screen {
     background: linear-gradient(90deg, #5d54a4, #7c78b8);
     position: relative;
     width: 294px;
+    height: 402px;
     box-shadow: 0px 0px 24px #242a56;
   }
 
@@ -263,21 +324,15 @@ body {
   }
 
   .sign .screen .screen__content .login .login__submit {
-    background: #fff;
-    font-size: 14px;
-    margin-top: 30px;
-    padding: 16px 20px;
-    border-radius: 26px;
-    border: 1px solid #d4d3e8;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 86%;
-    color: #4c489d;
-    box-shadow: 3px 3px 2px #242a56;
-    cursor: pointer;
-    transition: 0.2s;
+    width: 74%;
+    padding: 15px 11px;
+    margin: 11px 19px;
+  }
+
+  .sign .screen .screen__content .login {
+    width: 299px;
+    padding-left: 45px;
+    padding-top: 145px;
   }
 
   .sign .screen .screen__content .login .link {
@@ -287,20 +342,70 @@ body {
     margin-left: 29px;
   }
 
+  .sign .screen .screen__content .login .login__field .labelsign {
+    top: 14px;
+    left: 0px;
+  }
+
+  @keyframes labelsign {
+    0% {
+      top: 44px;
+    }
+    100% {
+      top: 14px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .top {
+    top: 44px;
+  }
+
+  @keyframes top {
+    0% {
+      top: 14px;
+    }
+    100% {
+      top: 44px;
+    }
+  }
+
   .sign .screen .screen__content .login .login__field .login__icon {
-    position: absolute;
-    top: 22px;
+    top: 12px;
     font-size: 19px;
-    left: -1px;
-    color: #7875b5;
+    left: -22px;
   }
 
   .sign .screen .screen__content .login .login__field .eye {
-    position: absolute;
-    right: 50px;
-    top: 24px;
-    font-size: 20px;
-    color: #7875b5;
+    right: 6px;
+    top: 16px;
+    font-size: 23px;
+  }
+
+  .sign .screen .screen__content .login .signin {
+    bottom: 10px;
+    left: 8px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1 {
+    right: 91px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape2 {
+    top: -171px;
+    right: -23px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    top: -118px;
+    right: -94px;
+  }
+
+  .swal2-popup {
+    width: 290px !important;
+  }
+
+  .swal2-html-container {
+    font-size: 1.05em !important;
   }
 }
 
@@ -323,33 +428,30 @@ body {
     background: linear-gradient(90deg, #5d54a4, #7c78b8);
     position: relative;
     width: 241px;
+    height: 370px;
     box-shadow: 0px 0px 24px #242a56;
   }
 
   .sign .screen .screen__content .login {
-    width: 320px;
-    padding: 30px 17px;
-    padding-top: 121px;
+    width: 340px;
+    padding: 0;
+    padding-top: 138px;
+    padding-left: 40px;
+  }
+
+  .sign .screen .screen__content .login .login__field {
+    padding: 13px 0px 4px;
+    position: relative;
   }
 
   .sign .screen .screen__content .login .login__submit {
-    background: #fff;
+    padding: 9px 14px;
+    width: 48%;
+    margin: 25px 17px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
     font-size: 14px;
-    margin-top: 30px;
-    margin-left: 34px;
-    padding: 16px 20px;
-    border-radius: 26px;
-    border: 1px solid #d4d3e8;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 60%;
-    color: #4c489d;
-    box-shadow: 3px 3px 2px #242a56;
-    cursor: pointer;
-    transition: 0.2s;
-    margin-left: -3px;
   }
 
   .sign .screen .screen__content .login .link {
@@ -360,21 +462,74 @@ body {
   }
 
   .sign .screen .screen__content .login .login__field .login__input {
-    border: none;
-    border-bottom: 2px solid #d1d1d4;
-    background: none;
-    padding: 10px;
-    padding-left: 24px;
-    font-weight: 700;
-    width: 58%;
-    transition: 0.2s;
+    padding: 4px 0px;
+    width: 56%;
+  }
+
+  .sign .screen .screen__content .login .login__field .labelsign {
+    top: 17px;
+    left: 0px;
+  }
+
+  @keyframes labelsign {
+    0% {
+      top: 47px;
+    }
+    100% {
+      top: 17px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .top {
+    top: 47px;
+  }
+
+  @keyframes top {
+    0% {
+      top: 17px;
+    }
+    100% {
+      top: 47px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .login__icon {
+    top: 14px;
+    font-size: 20px;
+    left: -25px;
   }
 
   .sign .screen .screen__content .login .login__field .eye {
-    position: absolute;
-    right: 107px;
-    top: 24px;
-    font-size: 20px;
-    color: #7875b5;
+    right: 116px;
+    top: 20px;
+    font-size: 21px;
+  }
+
+  .sign .screen .screen__content .login .login__submit .icon-chevron-right {
+    font-size: 22px;
+  }
+
+  .sign .screen .screen__content .login .signin .button__text {
+    font-size: 13px;
+  }
+
+  .sign .screen .screen__content .login .signin .icon-chevron-left {
+    font-size: 16px;
+  }
+
+  .sign .screen .screen__content .login .signin:hover .button__text {
+    font-size: 14px;
+  }
+
+  .sign .screen .screen__content .login .signin:hover .icon-chevron-left {
+    font-size: 19px;
+  }
+
+  .swal2-popup {
+    width: 238px !important;
+  }
+
+  .swal2-html-container {
+    font-size: 0.8em !important;
   }
 }

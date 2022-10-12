@@ -31,7 +31,7 @@
   <!-- script js -->
   <?php include("head/link_javascript.php") ?>
   <!-- jquery sign in  -->
-  <script defer src="js/sign in.js"></script>
+  <script defer type="module"  src="js/sign in.js"></script>
   <!-- //script js -->
 </head>
 <body>

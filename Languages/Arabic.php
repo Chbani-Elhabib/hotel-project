@@ -11,6 +11,12 @@
             'About' => "معلومات عنا",
             'Sign in' => "تسجيل الدخول",
 
+            //sign in 
+            'Username'  => "اسم المستخدم",
+            'Password'  => "كلمة المرور",
+            'Log In Now'  => "تسجيل الدخول الآن",
+            'Log Up Now'  => "سجل الان",
+
         );
 
         return $lang[$tradiction];

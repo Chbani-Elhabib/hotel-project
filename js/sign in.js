@@ -7,18 +7,28 @@ $(document).ready(function () {
   const validation_email = /(^\w+([\.-]?\w+))+\@gmail.com/;
   const eye = $(".eye");
   const btn = $(".btnn");
+  const html = $("html");
+  const login = $(".login");
 
 
-  var jsonn = "ggg"; 
-  
-  fetch('./json/MessageEnglish.json')
-  .then(response => response.json())
-  .then(json => {
-    // console.log(json['valid username']);
-    jsonn = json['valid username'];
-  }).call(this);
 
-  console.log(jsonn);
+
+
+  // fetch('./json/MessageEnglish.json')
+  // .then(response => response.json())
+  // .then(json => {
+  //   console.log(json["chbani"]);
+  // });
+
+  // var lang = function(){
+  //   fetch('./json/MessageEnglish.json')
+  //   .then(response => response.json())
+  //   .then(json => {
+  //     // console.log(json[lang]);
+  //     return json;
+  //   });
+  // };
+  // console.log(lang);
 
   //start click en label focus to input
   labelsign.each((e) => {
@@ -84,45 +94,74 @@ $(document).ready(function () {
 
   //start btn click
   btn[0].addEventListener("click", (e) => {
+    e.preventDefault();
     if (login__input[0].value.length == 0) {
-      e.preventDefault();
-      Swal.fire({
-        icon: 'error',
-        text: "please enter a valid username",
-      });
       login__input.eq(0).css('border-bottom', '2px solid rgb(245 1 57)');
-    }  
-    // } else if (login__input[0].value.length == 0 && login__input[1].value.length > 0) {
-    //   Swal.fire({
-    //     icon: 'error',
-    //     text: 'please enter a valid email address',
-    //   });
-    //   login__input.eq(0).css('border-bottom', '2px solid rgb(245 1 57)');
-    //   e.preventDefault();
-    // } else if (login__input[0].value.length > 0 && login__input[1].value.length == 0) {
-    //   Swal.fire({
-    //     icon: 'error',
-    //     text: 'please enter a valid password',
-    //   });
-    //   login__input.eq(1).css('border-bottom', '2px solid rgb(245 1 57)');
-    //   e.preventDefault();
-    // } else {
-    //   if (!login__input[0].value.match(validation_email)) {
-    //     Swal.fire({
-    //       icon: 'error',
-    //       title: 'Email error',
-    //       text: 'example: users@gmail.com',
-    //     });
-    //   }else{
-    //     Swal.fire({
-    //       position: 'top-end',
-    //       icon: 'success',
-    //       title: 'Your work has been saved',
-    //       showConfirmButton: false,
-    //       timer: 1500
-    //     })
-    //   }
-    // };
+      if(html.attr("lang") == "en"){
+        Swal.fire({
+          icon: 'error',
+          text: "please enter a valid username",
+        });
+      }else{
+        Swal.fire({
+          icon: 'error',
+          text: "الرجاءادخال اسم مستخدم صحيح",
+        });
+      };
+    }else if(login__input[1].value.length == 0) {
+      login__input.eq(1).css('border-bottom', '2px solid rgb(245 1 57)');
+      if(html.attr("lang") == "en"){
+        Swal.fire({
+          icon: 'error',
+          text: "please enter a valid password",
+        });
+      }else{
+        Swal.fire({
+          icon: 'error',
+          text: "الرجاء إدخال كلمة السر الصحيحة",
+        });
+      };
+    }else{
+      $.ajax({
+        url: "database/loginverification.php",
+        type: "POST",
+        data: {username: login__input[0].value, Password: login__input[1].value},
+        success: function (response) {
+          if(response == "No"){
+            if(html.attr("lang") == "en"){
+              Swal.fire({
+                icon: 'error',
+                text: "This account is not registered",
+              });
+            }else{
+              Swal.fire({
+                icon: 'error',
+                text: "هذا الحساب غير مسجل",
+              });
+            };
+          }else{
+            if(html.attr("lang") == "en"){
+              Swal.fire({
+                icon: 'success',
+                title: 'welcome ' + login__input[0].value,
+                showConfirmButton: false,
+                timer: 2000
+              });
+            }else{
+              Swal.fire({
+                icon: 'success',
+                title: login__input[0].value + ' أهلا بك',
+                showConfirmButton: false,
+                timer: 2000
+              });
+            };
+            setTimeout((el) => {
+              login.submit();
+            },2000)
+          };
+        }
+      });
+    }; 
     //end btn click
   });
   // -------------

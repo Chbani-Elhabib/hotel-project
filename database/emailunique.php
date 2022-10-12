@@ -4,6 +4,7 @@ include("data.php");
 
 // $EmailUserName =  Array();
 
+// verification users name
 if(isset($_POST['username'])){
 
     $UserName = $_POST['username'];
@@ -31,6 +32,7 @@ if(isset($_POST['username'])){
 
 };
 
+// verification email
 if(isset($_POST['email'])){
 
     $Email = $_POST['email'];
@@ -57,6 +59,7 @@ if(isset($_POST['email'])){
     // $EmailUserName['Email'] =  $Email;
 
 };
+
 
 // print_r($EmailUserName);
 
