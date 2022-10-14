@@ -24,6 +24,7 @@
 	width: 220px;
 	position: absolute;
 	top: -16px;
+	left: -28px;
 }
 
 /* -------------------
@@ -32,6 +33,7 @@
 
 .col {
 	grid-area: Company Services Contact follow;
+	width: 232px;
 }
 
 .footer .row {
@@ -89,10 +91,17 @@
 	padding: 5px;
 }
 
-.footer .row .col ul li a:hover {
+.footer .row .col ul li span {
+	color: #337ab7;
+    text-decoration: none;
+}
+
+.footer .row .col ul li:hover a ,
+.footer .row .col ul li:hover span {
 	color: #ffffff;
 	padding-left: 8px;
 }
+
 
 .icon-location2:before,
 .icon-envelop:before,
@@ -118,10 +127,13 @@
 	background-color: rgba(255, 255, 255, 0.2);
 	margin: 0 10px 10px 0;
 	text-align: center;
-	line-height: 40px;
+	line-height: 45px;
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
+}
+.footer .row .col .social-links a i {
+    font-size: 20px;
 }
 
 .footer .row .col .social-links a:hover {
@@ -134,7 +146,7 @@
 ----------------- */
 
 .Copyright {
-	font-size: 17px;
+	font-size: 24px;
 	color: #ffffffd6;
 	border-top: #fdb516 2px solid;
 	padding-top: 22px;
@@ -231,6 +243,10 @@
 		width: 96px;
 	}
 
+	.Copyright{
+		font-size: 21px;
+	}
+
 }
 
 /* // 767 px  */
@@ -251,17 +267,12 @@
 	}
 }
 
-/* // 526 px  */
 
-@media (max-width: 526px) {
-	.footer .footer_row .logo_hotel img {
-		left: -13px;
-	}
-}
 
-/* // 465 px  */
 
-@media(max-width: 465px) {
+/* // 540 px  */
+
+@media(max-width: 540px) {
 
 	.footer .footer_row .logo_hotel img {
 
@@ -272,7 +283,7 @@
 	}
 
 	.footer .row {
-		width: 83%;
+		width: 91%;
 		margin: 15px auto;
 		display: grid;
 		grid-template-areas:
@@ -300,13 +311,50 @@
 		margin-top: 10px;
 		flex-wrap: nowrap;
 		margin-left: 4px;
+		width: 389px;
+	}
+
+	.Copyright{
+		font-size: 18px;
+		padding-top: 19px;
 	}
 
 }
 
+/* // 526 px  */
+
+@media (max-width: 526px) {
+	.footer .footer_row .logo_hotel img {
+		left: -13px;
+	}
+}
+@media (max-width: 504px) {
+
+	.footer .row .col .social-links {
+		width: 352px;
+	}
+}
+@media (max-width: 463px) {
+
+	.footer .row .col .social-links {
+		width: 352px;
+	}
+}
+@media (max-width: 449px) {
+
+	.footer .row .col .social-links {
+		width: 297px;
+	}
+}
+
+
 /* // 425 px  */
 
 @media(max-width: 425px) {
+
+	.footer .row .col .social-links {
+		width: 247px;
+	}
 
 	.footer .row .col h4 {
 		font-size: 23px;

@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- ======footer.css========= -->
   <link rel="stylesheet" href="css/header_footer/footer.css">
+  <?php
+  if($_SESSION["lang"] == "ar"){
+    echo '<link rel="stylesheet" href="css/header_footer/arfooter.css">' ;
+  } 
+  ?>
   <!-- //link -->
   <!-- iconn -->
   <link rel="stylesheet" href="iconn/style.css">

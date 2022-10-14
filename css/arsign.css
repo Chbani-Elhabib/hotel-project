@@ -1,0 +1,272 @@
+.sign .screen .screen__content .login {
+  padding: 38px;
+  padding-top: 133px;
+  padding-left: 25px;
+}
+.sign .screen .screen__content .login .login__field .login__icon {
+    right: -26px;
+}
+
+.sign .screen .screen__content .login .login__field .labelsign {
+  top: 25px;
+  right: 0px;
+}
+
+@keyframes labelsign {
+  0% {
+    top: 58px;
+  }
+  100% {
+    top: 27px;
+  }
+}
+
+.sign .screen .screen__content .login .login__field .top {
+  animation: top 0.5s;
+  top: 58px;
+}
+
+@keyframes top {
+  0% {
+    top: 27px;
+  }
+  100% {
+    top: 58px;
+  }
+}
+
+.sign .screen .screen__content .login .login__field .eye {
+  right: 245px;
+  top: 26px;
+}
+
+.sign .screen .screen__content .login .login__submit {
+  width: 64%;
+}
+
+.sign .screen .screen__content .login .signin {
+  flex-direction: row;
+  color: #ffffff;
+  bottom: 19px;
+  left: 11px;
+  align-items: flex-end;
+}
+
+.sign .screen .screen__content .login .signin .button__text {
+  text-decoration: none;
+}
+
+.sign .screen .screen__content .login .login__submit .icon-chevron-right {
+  transform: rotate(179deg);
+  margin-right: 7px;
+}
+
+.sign .screen .screen__background .screen__background__shape1 {
+  transform: rotate(228deg);
+  top: -28px;
+  right: -261px;
+}
+
+.sign .screen .screen__background .screen__background__shape2 {
+  top: -138px;
+  right: 167px;
+  transform: rotate(49deg);
+}
+
+.sign .screen .screen__background .screen__background__shape3 {
+  background: linear-gradient(31deg, #242a56, #6a679e);
+  top: -57px;
+  right: 256px;
+  transform: rotate(318deg);
+}
+
+.sign .screen .screen__background .screen__background__shape4 {
+    right: 0;
+    bottom: 26px;
+}
+/* ------------------
+-----responsive------
+------------------ */
+@media (max-width: 530px) {
+  .sign .screen .screen__content .login .login__submit {
+    width: 64%;
+    margin: 46px -5px;
+  }
+
+  .sign .screen .screen__content .login .login__submit {
+    font-size: 14px;
+  }
+
+  .sign .screen .screen__content .login {
+    width: 317px;
+  }
+
+  .sign .screen .screen__content .login .signin {
+    bottom: 10px;
+    left: 3px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye {
+    right: 209px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1 {
+    top: -33px;
+    right: -310px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape2 {
+    right: 124px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3 {
+    top: -92px;
+    right: 245px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape4 {
+    right: -32px;
+  }
+}
+
+@media (max-width: 410px) {
+  .sign .screen .screen__content .login {
+    width: 281px;
+    padding-right: 27px;
+  }
+
+  .sign .screen .screen__content .login .login__field .labelsign{
+    top: 19px;
+  }
+
+  @keyframes labelsign {
+    0% {
+      top: 51px;
+    }
+    100% {
+      top: 19px;
+    }
+  }
+  
+  .sign .screen .screen__content .login .login__field .top {
+    animation: top 0.5s;
+    top: 51px;
+  }
+  
+  @keyframes top {
+    0% {
+      top: 19px;
+    }
+    100% {
+      top: 51px;
+    }
+  }
+
+  .sign .screen .screen__content .login .login__field .login__icon{
+    top: 18px;
+    right: -23px;
+  }
+
+  .sign .screen .screen__content .login .login__field .eye{
+    right: 202px;
+    top: 21px;
+  }
+
+  .sign .screen .screen__content .login .login__submit{
+    margin: 27px -5px;
+    width: 68%;
+  }
+
+  .sign .screen .screen__content .login .login__submit .icon-chevron-right{
+    margin-right: 0px;
+  }
+
+  .sign .screen .screen__content .login .signin{
+    bottom: 5px;
+    left: 0px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape1{
+    top: -38px;
+    right: -333px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape2{
+    right: 78px;
+    top: -163px;
+  }
+
+  .sign .screen .screen__background .screen__background__shape3{
+    top: -125px;
+    right: 203px;
+  }
+}
+
+@media (max-width: 346px){
+    .sign .screen .screen__content .login {
+        width: 326px;
+    }
+
+    .sign .screen .screen__content .login .login__field .login__icon {
+        font-size: 17px;
+    }
+
+    .sign .screen .screen__content .login .login__field .labelsign {
+        top: 19px;
+        font-size: 14px;
+    }
+
+    @keyframes labelsign {
+        0% {
+          top: 51px;
+        }
+        100% {
+          top: 19px;
+        }
+      }
+      
+      .sign .screen .screen__content .login .login__field .top {
+        animation: top 0.5s;
+        top: 51px;
+      }
+      
+      @keyframes top {
+        0% {
+          top: 19px;
+        }
+        100% {
+          top: 51px;
+        }
+      }
+
+    .sign .screen .screen__content .login .login__field .eye {
+        right: 160px;
+    }
+
+    .sign .screen .screen__content .login .login__submit {
+        margin: 27px -19px;
+        width: 54%;
+        font-size: 12px;
+        align-items: flex-start;
+    }
+
+    .sign .screen .screen__background .screen__background__shape1 {
+        top: -44px;
+        right: -370px;
+    }
+
+    .sign .screen .screen__background .screen__background__shape2 {
+        right: 31px;
+        top: -176px;
+    }
+
+    .sign .screen .screen__background .screen__background__shape3 {
+        top: -155px;
+        right: 170px;
+        width: 172px;
+    }
+
+    .sign .screen .screen__content .login .signin {
+        bottom: 12px;
+    }
+}

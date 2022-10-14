@@ -23,10 +23,15 @@
   }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $_SESSION["lang"];?>">
+<html dir="<?php echo $_SESSION["lang"] == "en" ? "ltr":"rtl";?>" lang="<?php echo $_SESSION["lang"];?>">
 <head>
   <?php include("head/link_css.php") ?>
-  <link rel="stylesheet" href="css/sign in.css">  
+  <link rel="stylesheet" href="css/sign.css">
+  <?php
+  if($_SESSION["lang"] == "ar"){
+    echo '<link rel="stylesheet" href="css/arsign.css">' ;
+  }  
+  ?>
   <!-- // css  -->
   <!-- script js -->
   <?php include("head/link_javascript.php") ?>

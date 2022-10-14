@@ -251,7 +251,7 @@ nav.navbar.navbar-default {
 }
 
 .menu__link {
-	font-size: .9em;
+	font-size: 1em;
 	font-weight: bold;
 	display: block;
 	padding: 1em;
@@ -334,7 +334,13 @@ li.menu__item:nth-child(6) {
 
 /* fin header */
 
-@media(max-width:991px) {
+
+@media(max-width:1193px) {
+
+}
+@media(max-width:992px) {
+
+
 
 	.logohotel {
 		width: 113px;
@@ -802,6 +808,8 @@ li.menu__item:nth-child(6) {
 		padding: 3em 0 13.9em 0px;
 	}
 }
+
+
 
 @media(max-width:767px) {
 	.navbar-default .navbar-toggle .icon-bar {
