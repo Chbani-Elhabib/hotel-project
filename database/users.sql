@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2022 at 02:01 AM
+-- Generation Time: Oct 17, 2022 at 05:03 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -30,13 +30,12 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `UsersID` int(11) NOT NULL,
   `Email` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `Password` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `Passworde` varchar(255) CHARACTER SET utf8 NOT NULL,
   `FirstName` varchar(255) CHARACTER SET utf8 NOT NULL,
   `LastName` varchar(255) CHARACTER SET utf8 NOT NULL,
   `GroupUsers` int(11) NOT NULL DEFAULT 0,
   `ValidationEmail` int(11) NOT NULL DEFAULT 0,
   `TrustStatust` int(11) NOT NULL DEFAULT 0,
-  `passwordshow` varchar(255) CHARACTER SET utf8 NOT NULL,
   `UserName` varchar(255) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -44,8 +43,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UsersID`, `Email`, `Password`, `FirstName`, `LastName`, `GroupUsers`, `ValidationEmail`, `TrustStatust`, `passwordshow`, `UserName`) VALUES
-(2, 'chbani@gmail.com', 'sdfsdfdsfs', 'sdfsfd', 'sdfds', 0, 0, 0, 'sdfsfds', 'chbani');
+INSERT INTO `users` (`UsersID`, `Email`, `Passworde`, `FirstName`, `LastName`, `GroupUsers`, `ValidationEmail`, `TrustStatust`, `UserName`) VALUES
+(12, 'ch@gmail.com', '$2y$10$57JJkduPY3PDAht80.2YpeETqD1fgS8rogGy5vkbgB5LXaUjSbyE2', '', '', 0, 0, 0, 'JT79197'),
+(13, 'chbani@gmail.com', '$2y$10$/hBRvVFStFODPMF0Rt7/QOTJBzR64pOG.I0T0ZYYXhWoT/nJZfljO', '', '', 0, 0, 0, 'chbani'),
+(14, 'chban@gmail.com', '$2y$10$1i2moWBo9TI9dsyBXbKehucmQFWaVZIcz6AYsge1HF.aAFkoxqcQK', '', '', 0, 0, 0, 'chban');
 
 --
 -- Indexes for dumped tables
@@ -55,7 +56,8 @@ INSERT INTO `users` (`UsersID`, `Email`, `Password`, `FirstName`, `LastName`, `G
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`UsersID`);
+  ADD PRIMARY KEY (`UsersID`),
+  ADD UNIQUE KEY `UserName` (`UserName`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -65,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UsersID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `UsersID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

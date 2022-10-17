@@ -5,7 +5,7 @@
         static $lang = Array(
 
             // header 
-            'Hotel' => "فندق",
+            'Hotel' => "فنادق",
             'Rooms' => "غرف",
             'menu' => "قائمة",
             'About' => "معلومات عنا",
@@ -27,7 +27,7 @@
             'adriss' => "عنوان",
             'Email' => "contact@hotel.com",
             'Tel' => "06-61-05-99-51",
-            'Tel_tabit' => "+ 212-528-263-799",
+            'Tel_tabit' => "212-528-263-799+",
             'Copyright' => "حقوق النشر",
             'linkhotel' => "Hotel.com",
 
@@ -36,6 +36,14 @@
             'Password'  => "كلمة المرور",
             'Log In Now'  => "تسجيل الدخول الآن",
             'Log Up Now'  => "سجل الان",
+
+            // verification
+            'VeriryMessage' => "تحقق من عنوان بريدك الإلكتروني",
+            'codesent' => "تم إرسال رمز التحقق إلى",
+            'Verify' => "تحقق",
+            'Resendcode' => "أعد إرسال الرمز",
+            'Changeemail' => "تغيير الايميل",
+            'backtohomepage' => "العودة إلى الصفحة الرئيسية",
 
         );
 

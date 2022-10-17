@@ -1,3 +1,181 @@
 .footer .footer_row .logo_hotel img {
-    left: 0;
+  left: 0;
+}
+
+.footer .row .col ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer .row .col ul li span {
+  margin-left: 9px;
+}
+
+@keyframes firstchild {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 26%;
+  }
+}
+@keyframes nthchild2 {
+  from {
+    top: 0px;
+  }
+  to {
+    width: 36%;
+  }
+}
+@keyframes nthchild3 {
+  from {
+    top: 0px;
+  }
+  to {
+    width: 61%;
+  }
+}
+@keyframes lastchild {
+  from {
+    top: 0px;
+  }
+  to {
+    width: 27%;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer .footer_row .logo_hotel img {
+    left: -82px;
+  }
+}
+@media (max-width: 901px) {
+  .footer .footer_row .logo_hotel img {
+    left: -10px;
+  }
+}
+@media (max-width: 881px) {
+  @keyframes firstchild {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 20%;
+    }
+  }
+  @keyframes nthchild2 {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 28%;
+    }
+  }
+  @keyframes nthchild3 {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 46%;
+    }
+  }
+  @keyframes lastchild {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 21%;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer .footer_row .logo_hotel img {
+    left: 47px;
+  }
+  .footer .row .col {
+    margin-right: 60px;
+    width: 265px;
+  }
+
+  .footer .row .col ul {
+    margin-right: 49px;
+  }
+
+  @keyframes firstchild {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 17%;
+    }
+  }
+  @keyframes nthchild2 {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 24%;
+    }
+  }
+  @keyframes nthchild3 {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 40%;
+    }
+  }
+  @keyframes lastchild {
+    from {
+      top: 0px;
+    }
+    to {
+      width: 18%;
+    }
+  }
+
+  .footer .row .col .social-links {
+    width: 298px;
+  }
+}
+
+@media (max-width: 443px) {
+  .footer .row .col .social-links {
+    width: 235px;
+  }
+}
+
+@media (max-width: 414px) {
+  .footer .footer_row .logo_hotel img {
+    left: 11px;
+  }
+
+  .Copyright {
+    width: 73%;
+    font-size: 16px;
+  }
+
+  .footer .row .col {
+    margin-right: 23px;
+  }
+}
+@media (max-width: 320px) {
+  .footer .row .col {
+    margin-right: 4px;
+    width: 244px;
+  }
+
+  .footer .row .col ul {
+    margin-right: 26px;
+    margin-top: 8px;
+  }
+
+  .Copyright {
+    font-size: 13px;
+  }
 }

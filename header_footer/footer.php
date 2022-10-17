@@ -10,8 +10,7 @@
     <div class="row">           
       <!-- Company -->
       <div class="col">
-        <h4 class="hh" ><?php echo lang("Company");?></h4>
-        <span class="border-bottom"></span>
+        <h4 class="border-bottom" ><?php echo lang("Company");?></h4>
         <ul>
           <li><a href="#"><?php echo lang("About");?></a></li>
           <li><a href="#"><?php echo lang("Careers");?></a></li>
@@ -24,8 +23,7 @@
       <!-- //Company -->
       <!-- Services -->
       <div class="col">
-        <h4><?php echo lang("Services");?></h4>
-        <span class="border-bottom"></span>
+        <h4 class="border-bottom" ><?php echo lang("Services");?></h4>
         <ul>
           <li><a href="#"><?php echo lang("Roums");?></a></li>
           <li><a href="#"><?php echo lang("Type Services");?></a></li>
@@ -35,8 +33,7 @@
       <!-- //Services -->
       <!-- Contact -->
       <div class="col">
-        <h4><?php echo lang("Contact");?></h4>
-        <span class="border-bottom"></span>
+        <h4 class="border-bottom"><?php echo lang("Contact");?></h4>
         <ul>
           <li>
             <span class="icon-location2"></span>
@@ -59,8 +56,7 @@
       <!-- //Contact -->
       <!-- follow us -->
       <div class="col">
-        <h4><?php echo lang("follow us");?></h4>
-        <span class="border-bottom"></span>
+        <h4 class="border-bottom" ><?php echo lang("follow us");?></h4>
         <div class="social-links">
           <a href="#"><i class="fab icon-facebook"></i></a>
           <a href="#"><i class="fab icon-twitter"></i></a>
@@ -72,7 +68,7 @@
     </div>
     <div class="footer_row text-center p-3 Copyright">
       <!-- Copyright -->
-      <?php echo lang("Copyright");?> © 2022  |
+      <?php echo lang("Copyright");?> © <?php echo date("Y");?>  |
       <a href="#"><?php echo lang("linkhotel");?></a>
       <!-- Copyright -->
     </div>

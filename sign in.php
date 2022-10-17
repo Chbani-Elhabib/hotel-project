@@ -17,9 +17,23 @@
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    echo $_POST["Email"];
-    echo $_POST["Password"];
+    $_SESSION["Username"] = $_POST["Username"];
 
+    include("database/classdata.php");
+
+    $db = new Database();
+    $db = $db->select($_SESSION["Username"]);
+
+    foreach ($db as $row) {
+      $_SESSION["GroupUsers"]=$row->GroupUsers;
+      $_SESSION["ValidationEmail"]=$row->ValidationEmail;
+      $_SESSION["Email"]=$row->Email;
+    };
+
+    if($_SESSION["ValidationEmail"] == "0"){
+        header('Location: users/verification.php');
+        exit();
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -52,8 +66,8 @@
         <form class="login" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="login__field">
             <i class="login__icon icon-user"></i>
-            <input type="text" name="Email" class="login__input">
-            <label for="Email" class="labelsign"><?php echo lang("Username") ?></label>
+            <input type="text" name="Username" class="login__input">
+            <label for="Username" class="labelsign"><?php echo lang("Username") ?></label>
           </div>
           <div class="login__field">
             <i class="login__icon icon-locked"></i>
