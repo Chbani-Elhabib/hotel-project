@@ -33,6 +33,18 @@
     if($_SESSION["ValidationEmail"] == "0"){
         header('Location: users/verification.php');
         exit();
+    }else if($_SESSION["GroupUsers"] == "3"){
+      header('Location: admine/index.php');
+      exit();
+    }else if($_SESSION["GroupUsers"] == "2"){
+      // header('Location: admine/index.php');
+      // exit();
+    }else if($_SESSION["GroupUsers"] == "1"){
+      // header('Location: admine/index.php');
+      // exit();
+    }else if($_SESSION["GroupUsers"] == "0"){
+      header('Location: index.php');
+      exit();
     }
   }
 ?>
