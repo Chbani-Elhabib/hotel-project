@@ -34,7 +34,7 @@
         header('Location: users/verification.php');
         exit();
     }else if($_SESSION["GroupUsers"] == "3"){
-      header('Location: admine/index.php');
+      header('Location: admine/Dashboard.php');
       exit();
     }else if($_SESSION["GroupUsers"] == "2"){
       // header('Location: admine/index.php');

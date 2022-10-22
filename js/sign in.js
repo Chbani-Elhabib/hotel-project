@@ -10,27 +10,6 @@ $(document).ready(function () {
   const html = $("html");
   const login = $(".login");
 
-
-
-
-
-  // fetch('./json/MessageEnglish.json')
-  // .then(response => response.json())
-  // .then(json => {
-  //   console.log(json["chbani"]);
-  // });
-
-  // var lang = function(){
-  //   fetch('./json/MessageEnglish.json')
-  //   .then(response => response.json())
-  //   .then(json => {
-  //     // console.log(json[lang]);
-  //     return json;
-  //   });
-  // };
-  // console.log(lang);
-
-  //start click en label focus to input
   labelsign.each((e) => {
     labelsign.eq(e).click((ele) => {
       login__input[e].focus();
@@ -157,6 +136,7 @@ $(document).ready(function () {
             };
             setTimeout((el) => {
               login.submit();
+              login__input[0].value = "";
             },2000)
           };
         }
