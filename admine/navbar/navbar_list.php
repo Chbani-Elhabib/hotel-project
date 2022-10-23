@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="Dashboard.php"><img src="../image/Hotels.com.png" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="Dashboard.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="Dashboard.php"><img src="../image/H.png" alt="logo" /></a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
@@ -52,45 +52,133 @@
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <div class="tow-iconn">
-                            <span class="icon-building"></span>
-                            <span class="icon-plus"></span>
-                        </div>
                          <a class="nav-link" href="hotel/AddHotel.php">Add hotel</a>
                     </li>
                     <li class="nav-item">
-                        <div class="tow-iconn">
-                            <span class="icon-building"></span>
-                            <span class="icon-eye"></span>
-                        </div>
                          <a class="nav-link" href="hotel/ViewHotels.php">View hotels</a>
                     </li>
                 </ul>
             </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" data-bs-toggle="collapse" href="#UsersManagement" aria-expanded="false" aria-controls="UsersManagement">
                 <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                    <i class="icon-group"></i>
                 </span>
-                <span class="menu-title">Form Elements</span>
+                <span class="menu-title">Users Management</span>
+                <i class="icon-cheveron-down"></i>
             </a>
+            <div class="collapse" id="UsersManagement">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="AddRole.php">Add role</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="ViewRoles.php">View roles</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="AddUser.php">Add user</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="ViewUsers.php">View users</a>
+                    </li>
+                </ul>
+            </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" data-bs-toggle="collapse" href="#CustomersDetails" aria-expanded="false" aria-controls="CustomersDetails">
                 <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                    <i class="icon-user"></i>
                 </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Customers Details</span>
+                <i class="icon-cheveron-down"></i>
             </a>
+            <div class="collapse" id="CustomersDetails">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/AddHotel.php">Add customer</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/ViewHotels.php">View customers</a>
+                    </li>
+                </ul>
+            </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" data-bs-toggle="collapse" href="#RoomDetails" aria-expanded="false" aria-controls="RoomDetails">
                 <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
+                    <img src="image/room.png" alt="room">
                 </span>
-                <span class="menu-title">Charts</span>
+                <span class="menu-title">Rooms Details</span>
+                <i class="icon-cheveron-down"></i>
             </a>
+            <div class="collapse" id="RoomDetails">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/AddHotel.php">Add Room</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/ViewHotels.php">View Rooms</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#RoomBookingDetails" aria-expanded="false" aria-controls="RoomBookingDetails">
+                <span class="menu-icon">
+                    <i class="icon-bookmark"></i>
+                </span>
+                <span class="menu-title">Room Booking Details</span>
+                <i class="icon-cheveron-down"></i>
+            </a>
+            <div class="collapse" id="RoomBookingDetails">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/AddHotel.php">Add Booking</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/ViewHotels.php">View Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#Restaurants" aria-expanded="false" aria-controls="Restaurants">
+                <span class="menu-icon">
+                    <i class="icon-room_service"></i>
+                </span>
+                <span class="menu-title">Restaurants</span>
+                <i class="icon-cheveron-down"></i>
+            </a>
+            <div class="collapse" id="Restaurants">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/AddHotel.php">Add Food</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/ViewHotels.php">View Food</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#Bar" aria-expanded="false" aria-controls="Bar">
+                <span class="menu-icon">
+                    <i class="icon-local_bar"></i>
+                </span>
+                <span class="menu-title">Bar</span>
+                <i class="icon-cheveron-down"></i>
+            </a>
+            <div class="collapse" id="Bar">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/AddHotel.php">Add Drink</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="hotel/ViewHotels.php">View Drink</a>
+                    </li>
+                </ul>
+            </div>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="pages/icons/mdi.html">

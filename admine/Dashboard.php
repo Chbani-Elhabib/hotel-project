@@ -17,6 +17,7 @@ if($_SESSION["GroupUsers"] == "3"){
     <script defer src="js/vendor.bundle.base.js"></script>
     <script defer src="js/off-canvas.js"></script>
     <script defer src="js/misc.js"></script>
+    <script defer src="js/hoverable.js"></script>
     <title></title>
 </head>
 <body>
