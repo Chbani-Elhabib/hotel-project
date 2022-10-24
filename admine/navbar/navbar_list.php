@@ -1,4 +1,4 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas active" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="Dashboard.php"><img src="../image/Hotels.com.png" alt="logo" /></a>
         <a class="sidebar-brand brand-logo-mini" href="Dashboard.php"><img src="../image/H.png" alt="logo" /></a>
@@ -19,14 +19,14 @@
             </a>
             <div class="collapse" id="profile">
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                    <span class="icon-cog"></span>
-                    <a class="nav-link" href="admin/Settings.php">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <span class="icon-exit"></span>
-                    <a class="nav-link" href="admin/LogOut.php">Log out</a>
-                </li>
+                    <li class="nav-item">
+                        <span class="icon-cog"></span>
+                        <a class="nav-link" href="admin/Settings.php">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="icon-exit"></span>
+                        <a class="nav-link" href="admin/LogOut.php">Log out</a>
+                    </li>
                 </ul>
             </div>
         </li>        
@@ -42,23 +42,12 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" href="Hotel.php">
                 <span class="menu-icon">
                     <i class="icon-building"></i>
                 </span>
                 <span class="menu-title">Hotel management</span>
-                <i class="icon-cheveron-down"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
-                         <a class="nav-link" href="hotel/AddHotel.php">Add hotel</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="hotel/ViewHotels.php">View hotels</a>
-                    </li>
-                </ul>
-            </div>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#UsersManagement" aria-expanded="false" aria-controls="UsersManagement">
@@ -128,7 +117,7 @@
                 <span class="menu-icon">
                     <i class="icon-bookmark"></i>
                 </span>
-                <span class="menu-title">Room Booking Details</span>
+                <span class="menu-title">Booking Details</span>
                 <i class="icon-cheveron-down"></i>
             </a>
             <div class="collapse" id="RoomBookingDetails">
@@ -181,38 +170,26 @@
             </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link" data-bs-toggle="collapse" href="#SiteDynamic" aria-expanded="false" aria-controls="SiteDynamic">
                 <span class="menu-icon">
-                <i class="mdi mdi-contacts"></i>
+                    <i class="icon-earth"></i>
                 </span>
-                <span class="menu-title">Icons</span>
+                <span class="menu-title">Site Dynamic</span>
+                <i class="icon-cheveron-down"></i>
             </a>
-        </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
-                </span>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
+            <div class="collapse" id="SiteDynamic">
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="About.php">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="Slideshow.php">Slideshow</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="FAQ.php">FAQ</a>
+                    </li>
                 </ul>
             </div>
-        </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-                <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
-                </span>
-                <span class="menu-title">Documentation</span>
-            </a>
         </li>
     </ul>
 </nav>

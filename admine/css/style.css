@@ -6074,6 +6074,7 @@ div.tagsinput span.tag a {
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
+    justify-content: space-between;
   }
 }
 .navbar .navbar-menu-wrapper .navbar-toggler {
@@ -6088,11 +6089,7 @@ div.tagsinput span.tag a {
 .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
   font-size: 1.5rem;
 }
-@media (max-width: 991px) {
-  .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
-    display: none;
-  }
-}
+
 @media (max-width: 991px) {
   .navbar .navbar-menu-wrapper .navbar-toggler.navbar-toggler-right {
     padding-left: 15px;
@@ -6599,6 +6596,7 @@ div.tagsinput span.tag a {
 .sidebar .nav .nav-item .collapse {
   z-index: 999;
 }
+
 .sidebar .nav .nav-item .nav-link {
   display: -webkit-flex;
   display: flex;
@@ -6981,6 +6979,9 @@ div.tagsinput span.tag a {
   font-size: 1.3rem;
   margin-bottom: 4px;
 }
+.sidebar .nav .menu-items:nth-child(5n + 1) .nav-link .menu-icon i.icon-earth {
+  margin-bottom: 0px;
+}
 .sidebar .nav .menu-items:nth-child(5n + 2) .nav-link .menu-icon i {
   color: #00d25b;
 }
@@ -7021,13 +7022,13 @@ div.tagsinput span.tag a {
     top: 70px;
     bottom: 0;
     overflow: auto;
-    right: -244px;
+    left: -244px;
     -webkit-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
   }
   .sidebar-offcanvas.active {
-    right: 0;
+    left: 0;
   }
 }
 
@@ -7137,6 +7138,9 @@ div.tagsinput span.tag a {
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-sub-title {
     display: none;
   }
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link i.icon-cheveron-down{
+    display: none;
+  }
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {
     border-radius: 0 5px 5px 0px;
   }
@@ -7233,6 +7237,10 @@ div.tagsinput span.tag a {
     left: 70px;
     width: 190px;
   }
+  .sidebar-icon-only .sidebar .nav .nav-item.hover-open:first-child .collapse{
+    left: 71px;
+    top: 5px;
+  }
   .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
   .sidebar-dark.sidebar-icon-only
     .sidebar
@@ -7263,6 +7271,9 @@ div.tagsinput span.tag a {
     background-color: #6c7293;
     position: absolute;
     left: 0;
+  }
+  .sidebar-icon-only .sidebar .nav-item.hover-open:first-child .nav.sub-menu .nav-item .nav-link:before {
+    width: 0px;
   }
   .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link:hover:before {
     background-color: white;

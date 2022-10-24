@@ -13,6 +13,7 @@ if($_SESSION["GroupUsers"] == "3"){
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="icon/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Slideshow.css">
     <link rel="stylesheet" href="../iconn/style.css">
     <script defer src="js/vendor.bundle.base.js"></script>
     <script defer src="js/off-canvas.js"></script>
@@ -31,6 +32,11 @@ if($_SESSION["GroupUsers"] == "3"){
             <!-- starte navbar -->
             <?php include("navbar/navbar.php");?>
             <!-- end navbar -->
+            <!-- start Slideshow  body-->
+            <div class="Slideshow">
+                trait_exists
+            </div>
+            <!-- end Slideshow body-->
         </div>
         <!-- end management admin -->
     </div>
